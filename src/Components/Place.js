@@ -9,16 +9,12 @@ import foto2 from '../images/foto2.png'
 
 const Place = () => {
 
-    let dataPlace;
+    
     let { id } = useParams();
 
     id = parseInt(id)
 
-    Data.data.map((info) => {
-        if (id === info.id) {
-            return (dataPlace = info)
-        }
-    })
+    let dataPlace = Data.data.filter((info) => id === info.id)
     //console.log(dataPlace)
 
     return (
