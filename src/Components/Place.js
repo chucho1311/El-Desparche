@@ -14,8 +14,9 @@ const Place = () => {
 
     id = parseInt(id)
 
-    let dataPlace = Data.data.filter((info) => id === info.id)
-    //console.log(dataPlace)
+    let arr = Data.data.filter((info) => id === info.id)
+    let dataPlace = arr[0]
+    console.log(dataPlace)
 
     return (
         <div style={{ margin: 0, padding: 0 }}>
@@ -25,7 +26,7 @@ const Place = () => {
                 <div className="col">
                     <div className="row">
                         <div className="col-12 col-sm-6 centrar">
-                            <image className="img-place" src={dataPlace.photo} />
+                            <img className="img-place" src={dataPlace.photo} alt="place"/>
                         </div>
                         <div className="col info-place centrar">
                             <table className="table">
@@ -67,10 +68,10 @@ const Place = () => {
                             <h4>React-Bootstrap Carousel Component</h4>
                             <Carousel>
                                 <Carousel.Item interval={30000}>
-                                    <image
+                                    <img
                                         className="d-block w-100 img-carousel"
                                         src={dataPlace.photo}
-                                        alt="Image One"
+                                        alt="One"
                                     />
                                     <Carousel.Caption>
                                         {/* <h3>Label for first slide</h3>
@@ -78,10 +79,10 @@ const Place = () => {
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item interval={30000}>
-                                    <image
+                                    <img
                                         className="d-block w-100 img-carousel"
                                         src={foto2}
-                                        alt="Image Two"
+                                        alt="Two"
                                     />
                                     <Carousel.Caption>
                                         <h3>Label for second slide</h3>
