@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import Header from "../common/header";
 import Data from "../data.json"
@@ -14,9 +14,9 @@ const Place = () => {
 
     id = parseInt(id)
 
-    Data.data.map((info, indx) => {
+    Data.data.map((info) => {
         if (id === info.id) {
-            dataPlace = info
+            return (dataPlace = info)
         }
     })
     //console.log(dataPlace)
@@ -29,7 +29,7 @@ const Place = () => {
                 <div className="col">
                     <div className="row">
                         <div className="col-12 col-sm-6 centrar">
-                            <img className="img-place" src={dataPlace.photo} />
+                            <image className="img-place" src={dataPlace.photo} />
                         </div>
                         <div className="col info-place centrar">
                             <table className="table">
@@ -71,7 +71,7 @@ const Place = () => {
                             <h4>React-Bootstrap Carousel Component</h4>
                             <Carousel>
                                 <Carousel.Item interval={30000}>
-                                    <img
+                                    <image
                                         className="d-block w-100 img-carousel"
                                         src={dataPlace.photo}
                                         alt="Image One"
@@ -82,7 +82,7 @@ const Place = () => {
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item interval={30000}>
-                                    <img
+                                    <image
                                         className="d-block w-100 img-carousel"
                                         src={foto2}
                                         alt="Image Two"

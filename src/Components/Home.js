@@ -19,7 +19,7 @@ const Home = () => {
                             return (
                                 <Link to={`/place/${info.id}`} className="col-2 home-card" style={{ width: "250px" }} key={indx}>
                                     <div className=" row" >
-                                        <img src={info.photo} alt='photo-place' className="img-card" />
+                                        <image src={info.photo} alt='photo-place' className="img-card" />
                                         <div className="col-12 " style={{ color: "#4d8076" }}>Name: <label>{info.name}</label></div>
                                         <div className="col-12">Dirección: <label>{info.address}</label> </div>
                                         <div className="col-12">Numero: <label>{info.number}</label></div>
