@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+/*CSS Rick and Morty*/
+.image {
+  height: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search {
+  margin: 10px;
+  width: 500px;
+  height: 40px;
+  background-color: #575e6a;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 20px;
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonSearch {
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.locationInfo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.order {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imgResident {
+  height: 200px;
+  width: 200px;
+  align-self: center;
+}
+
+.card {
+  color: black;
+  border: 1px transparent;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px;
+  background-color: #e1d4eb;
+  height: 100vh;
+  min-width: 300px;
+}
+
+@media (hover:hover) {
+  .card:hover {
+    transition: 400ms;
+    transform: translate(10px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/*CSS Our Page*/
+
+/* Header*/
+.centrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centrar-2 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.App {
+  background-color: white;
+  color: black;
+}
+
+.header {
+  min-height: 200px;
+  background-color: #324b4c;
+}
+
+.img-logo {
+  height: 120px;
+  border-radius: 30px;
+}
+
+
+/*-------------------------------*/
+
+/*Body*/
+
+.body {
+  min-height: 670px;
+  padding: 10px;
+  background-color: white;
+}
+
+.img-card {
+  height: 200px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.home-card {
+  height: 350px;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #b7eeef;
+  -webkit-box-shadow: 2px 2px 5px #999;
+  -moz-box-shadow: 2px 2px 5px #999;
+  filter: shadow(color=#999999, direction=135, strength=2);
+}
+
+@media (hover:hover) {
+  .home-card:hover {
+    transition: 400ms;
+    transform: translate(10px);
+    -webkit-box-shadow: 10px 10px 10px #999;
+    -moz-box-shadow: 10px 10px 10px #999;
+    filter: shadow(color=#999999, direction=135, strength=2);
   }
+}
+
+
+/*-------------------------------*/
+
+/*Place*/
+
+.img-place{
+  height: 100%;
+  width: 100%;
+  max-height: 370px;
+  min-height: 200px;
+  max-width: 550px;
+  min-width: 215px;
+  border-radius: 8px;
+}
+
+.img-carousel{
+  max-height: 400px;
+  min-height: 250px;
+}
+
+.info-place{
+  margin: 10px;
+  padding: 10px;
+}
+
+/*-------------------------------*/
+
+/*Footer*/
+
+.footer {
+  background-color: #95b0b1;
+  height: 10vh;
+  
 }

@@ -1,22 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+// import Principal from "./Rick-Morty/components/principal";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import {useEffect, useState} from "react";
+
+import Home from './Components/Home';
+import Place from './Components/Place'
 
 function App() {
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="row centrar" style={{margin:0, padding:0}}>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/place/:id' element={<Place/>}/>
+        </Routes>
       </header>
     </div>
   );
