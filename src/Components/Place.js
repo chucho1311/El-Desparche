@@ -16,7 +16,7 @@ const Place = () => {
 
     let arr = Data.data.filter((info) => id === info.id)
     let dataPlace = arr[0]
-    console.log(dataPlace)
+    //console.log(dataPlace)
 
     return (
         <div style={{ margin: 0, padding: 0 }}>

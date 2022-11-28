@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from './Components/Home';
 import Place from './Components/Place'
+import About from './Components/About';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/place/:id' element={<Place/>}/>
+          <Route path='/about' element={<About/>}/>
         </Routes>
       </header>
     </div>
