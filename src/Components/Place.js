@@ -1,5 +1,5 @@
 import React from 'react';
-//import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom"
 import Header from "../common/header";
 import Data from "../data.json"
@@ -17,6 +17,10 @@ const Place = () => {
     let arr = Data.data.filter((info) => id === info.id)
     let dataPlace = arr[0]
     //console.log(dataPlace)
+
+    useEffect(() => {
+        window.scrollTo(0,1)
+    },[])
 
     return (
         <div style={{ margin: 0, padding: 0 }}>
@@ -65,7 +69,7 @@ const Place = () => {
                     </div>
                     <div className='row centrar' style={{ height: "400px" }}>
                         <div style={{ display: 'block', width: 700, padding: 30 }}>
-                            <h4>React-Bootstrap Carousel Component</h4>
+                            {/* <h4>React-Bootstrap Carousel Component</h4> */}
                             <Carousel>
                                 <Carousel.Item interval={30000}>
                                     <img
