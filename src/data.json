@@ -1,7 +1,8 @@
 {
-    "data":[
+    "restaurants":[
         {
             "id": 1,
+            "topic":"restaurant",
             "name": "Restaurante 1",
             "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1c/95/65/ef/sumergete-en-nuestra.jpg",
             "address":"calle 34",
@@ -10,30 +11,56 @@
         },
         {
             "id": 2,
+            "topic":"restaurant",
             "name": "Restaurante 2",
-            "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1c/95/65/ef/sumergete-en-nuestra.jpg",
+            "photo": "https://i.pinimg.com/564x/81/f4/4f/81f44f7a4a3fe0c900c5e9f4430eae3c.jpg",
             "address":"calle 34",
             "number":321456789,
             "instagram":"@Realplace"
         },
         {
             "id": 3,
+            "topic":"restaurant",
             "name": "Restaurante 3",
-            "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1c/95/65/ef/sumergete-en-nuestra.jpg",
+            "photo": "https://i.pinimg.com/564x/f2/70/d7/f270d7ec34d739613378abff4d7dcfb7.jpg",
             "address":"calle 34",
             "number":321456789,
             "instagram":"@Realplace"
         },{
             "id": 4,
+            "topic":"restaurant",
             "name": "Restaurante 4",
-            "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1c/95/65/ef/sumergete-en-nuestra.jpg",
+            "photo": "https://i.pinimg.com/564x/20/9b/06/209b06015142db3dc26aab0ac0ca12dd.jpg",
             "address":"calle 34",
             "number":321456789,
             "instagram":"@Realplace"
         },{
             "id": 5,
+            "topic":"restaurant",
             "name": "Restaurante 5",
-            "photo": "https://media-cdn.tripadvisor.com/media/photo-s/1c/95/65/ef/sumergete-en-nuestra.jpg",
+            "photo": "https://i.pinimg.com/564x/f2/24/39/f22439ca2b412a1e39dfa600a3d59a09.jpg",
+            "address":"calle 34",
+            "number":321456789,
+            "instagram":"@Realplace"
+        }
+    ],
+    "discotecas":[
+        {
+            "id": 1,
+            "name": "Discoteca 1",
+            "topic": "discoteca",
+            "photo": "https://i.pinimg.com/564x/45/dd/f3/45ddf36acd8c02cfd610501e38fcee86.jpg",
+            "address":"calle 34",
+            "number":321456789,
+            "instagram":"@Realplace"
+        }
+    ],
+    "parks":[
+        {
+            "id": 1,
+            "name": "Parque 1",
+            "topic":"park",
+            "photo": "https://i.pinimg.com/564x/f9/0e/b2/f90eb2c452d53bedcba8eda903b9444b.jpg",
             "address":"calle 34",
             "number":321456789,
             "instagram":"@Realplace"

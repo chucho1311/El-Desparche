@@ -1,80 +1,39 @@
-/*CSS Rick and Morty*/
-.image {
-  height: 300px;
-}
+/*Css Commons*/
 
-.search {
-  margin: 10px;
-  width: 500px;
-  height: 40px;
-  background-color: #575e6a;
-  border-radius: 5px;
-  border: transparent;
-  font-size: 20px;
-  color: whitesmoke;
-}
-
-.buttonSearch {
-  margin: 10px;
-}
-
-.locationInfo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.order {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.imgResident {
-  height: 200px;
-  width: 200px;
-  align-self: center;
-}
-
-.card {
-  color: black;
-  border: 1px transparent;
-  border-radius: 8px;
-  padding: 5px;
-  margin: 10px;
-  background-color: #e1d4eb;
-  height: 100vh;
-  min-width: 300px;
-}
-
-@media (hover:hover) {
-  .card:hover {
-    transition: 400ms;
-    transform: translate(10px);
-  }
-}
-
-/*CSS Our Page*/
-
-/* Header*/
 .centrar {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.centrar-2 {
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-}
+/*Animates css*/
 
-a:link, a:visited, a:active {
-  text-decoration:none;
+  /* Expandir*/
+  .blur-in-expand {
+    animation: blur-in-expand 0.3s linear both
+  }
+
+  @keyframes blur-in-expand {
+    0% {
+      transform: scale(0);
+      filter: blur(12px);
+      opacity: 0
+    }
+
+    100% {
+      transform: scale(1);
+      filter: blur(0);
+      opacity: 1
+    }
+  }
+  /*---------------*/
+
+/* Header*/
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
 .App {
@@ -101,7 +60,7 @@ a:link, a:visited, a:active {
 .body {
   min-height: 670px;
   padding: 10px;
-  background-color: white;
+  background: -webkit-linear-gradient(right, rgb(165, 180, 252), rgb(192, 132, 252));
 }
 
 .img-card {
@@ -110,11 +69,15 @@ a:link, a:visited, a:active {
   border-radius: 20px;
 }
 
+.img-fondo {
+  height: 100%;
+}
+
 .home-card {
-  height: 350px;
   border-radius: 8px;
   margin: 10px;
-  background-color: #b7eeef;
+  padding-bottom: 15px;
+  background: -webkit-linear-gradient(bottom, rgb(17, 24, 39), rgb(75, 85, 99));
   -webkit-box-shadow: 2px 2px 5px #999;
   -moz-box-shadow: 2px 2px 5px #999;
   filter: shadow(color=#999999, direction=135, strength=2);
@@ -133,9 +96,9 @@ a:link, a:visited, a:active {
 
 /*-------------------------------*/
 
-/*Place*/
+/*Places*/
 
-.img-place{
+.img-places {
   height: 100%;
   width: 100%;
   max-height: 370px;
@@ -145,22 +108,32 @@ a:link, a:visited, a:active {
   border-radius: 8px;
 }
 
-.img-carousel{
-  max-height: 400px;
+.img-carousel {
+  max-height: 290px;
   min-height: 250px;
 }
 
-.info-place{
+.info-places {
   margin: 10px;
   padding: 10px;
 }
+
+.description {
+  text-align: justify;
+}
+
+/*-------------------------------*/
+
+/*About*/
+
+
 
 /*-------------------------------*/
 
 /*Footer*/
 
 .footer {
-  background-color: #95b0b1;
-  height: 10vh;
-  
+  min-height: 150px;
+  color: whitesmoke;
+  background-color: #324b4c;
 }

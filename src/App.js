@@ -5,8 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import {useEffect, useState} from "react";
 
 import Home from './Components/Home';
-import Place from './Components/Place'
+import Restaurants from './Components/Restaurants'
 import About from './Components/About';
+import Discotecas from './Components/Discotecas';
+import Parks from './Components/Parks';
 
 function App() {
 
@@ -17,7 +19,9 @@ function App() {
       <header className="row centrar" style={{margin:0, padding:0}}>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/place/:id' element={<Place/>}/>
+          <Route path='/restaurant/:id' element={<Restaurants/>}/>
+          <Route path='/discoteca/:id' element={<Discotecas/>}/>
+          <Route path='/park/:id' element={<Parks/>}/>
           <Route path='/about' element={<About/>}/>
         </Routes>
       </header>
