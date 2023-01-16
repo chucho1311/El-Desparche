@@ -11,14 +11,15 @@ import Footer from '../common/footer';
 const Discotecas = () => {
 
     const redirect = useNavigate();
+
+    //Se optiene el Id y se seleciona la categoria seleccionada
     let { id } = useParams();
-
     id = parseInt(id)
-
     let arr = Data.discotecas.filter((info) => id === info.id)
     let dataDiscotecas = arr[0]
     //console.log(dataRestaurant)
 
+    //se obtiene informacion del usuario en el localStorage
     const userData = JSON.parse(localStorage.getItem("User"));
 
     useEffect(() => {
@@ -68,7 +69,6 @@ const Discotecas = () => {
                             </h5>
                             <div className='col-12 col-sm-6 centrar' style={{ height: "500px" }}>
                                 <div style={{ display: 'block', width: "700px" }}>
-                                    {/* <h4>React-Bootstrap Carousel Component</h4> */}
                                     <Carousel>
                                         <Carousel.Item interval={30000}>
                                             <img
@@ -77,8 +77,6 @@ const Discotecas = () => {
                                                 alt="One"
                                             />
                                             <Carousel.Caption>
-                                                {/* <h3>Label for first slide</h3>
-                                    <p>Sample Text for Image One</p> */}
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         <Carousel.Item interval={30000}>
@@ -88,8 +86,6 @@ const Discotecas = () => {
                                                 alt="Two"
                                             />
                                             <Carousel.Caption>
-                                                {/* <h3>Label for second slide</h3>
-                                    <p>Sample Text for Image Two</p> */}
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     </Carousel>

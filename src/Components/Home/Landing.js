@@ -6,11 +6,10 @@ import video from '../../images/PIZZA Spot Publicitario Trattoria.mp4'
 
 const Landing = () => {
 
-    const [topicSelected, setTopicSelected] = useState(Data.restaurants);
-
     return (
         <div className="col-12" style={{ display: "flex", justifyContent: "center" }}>
             <div className="row centrar">
+                {/* Carousel */}
                 <div className="col-12 centrar" style={{ display: 'flex', maxWidth: "900px", padding:"30px"}}>
                     <Carousel>
                         <Carousel.Item interval={3000}>

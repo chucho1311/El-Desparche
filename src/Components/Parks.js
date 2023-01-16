@@ -11,14 +11,15 @@ import Footer from '../common/footer';
 const Parks = () => {
 
     const redirect = useNavigate();
+
+    //Se optiene el Id y se seleciona la categoria seleccionada
     let { id } = useParams();
-
     id = parseInt(id)
-
     let arr = Data.parks.filter((info) => id === info.id)
     let dataParks = arr[0]
     //console.log(dataRestaurant)
 
+    //se obtiene informacion del usuario en el localStorage
     const userData = JSON.parse(localStorage.getItem("User"));
 
     useEffect(() => {

@@ -17,6 +17,7 @@ const Header = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
 
+    //Obtiene la informacion del usuario en el local Storage
     const getToLocalStorage = () => {
         console.log(user, password)
         const userData = JSON.parse(localStorage.getItem('User'))

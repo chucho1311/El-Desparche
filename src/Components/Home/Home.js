@@ -13,8 +13,8 @@ const Home = () => {
             <div className="body row justify-content-center" style={{ margin: 0 }}>
                 <div className="col-1"></div>
                 {loginStatus
-                    ? <Principal />
-                    : <Landing />}
+                    ? <Principal /> //Esta pagina muestra los restaurantes despues ingresar
+                    : <Landing /> /*Esta pagina muestra una landing page cuando no se ha ingre */}
                 <div className="col-1"></div>
             </div>
             <Footer />

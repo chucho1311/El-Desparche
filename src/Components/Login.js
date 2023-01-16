@@ -11,8 +11,8 @@ const Login = () => {
     const [userPassword, setUserPassword] = useState('');
     const [userConfirmPassword, setUserConfirmPassword] = useState('.');
 
+    // se guarda la informacion del usuario en el localStorage
     const saveLocalStorage = () => {
-
         let userData = {
             user: userEmail,
             password: userPassword,

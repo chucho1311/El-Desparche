@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from './Components/Home/Home';
 import Restaurants from './Components/Restaurants'
-import About from './Components/About';
 import Discotecas from './Components/Discotecas';
 import Parks from './Components/Parks';
 import Login from './Components/Login';
@@ -26,7 +25,6 @@ function App() {
           <Route path='/restaurant/:id' element={<Restaurants/>}/>
           <Route path='/discoteca/:id' element={<Discotecas/>}/>
           <Route path='/park/:id' element={<Parks/>}/>
-          <Route path='/about' element={<About/>}/>
         </Routes>
       </header>
     </div>
