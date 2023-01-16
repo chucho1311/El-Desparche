@@ -8,25 +8,45 @@
 
 /*Animates css*/
 
-  /* Expandir*/
-  .blur-in-expand {
-    animation: blur-in-expand 0.3s linear both
+/* Expandir*/
+.blur-in-expand {
+  animation: blur-in-expand 0.3s linear both
+}
+
+@keyframes blur-in-expand {
+  0% {
+    transform: scale(0);
+    filter: blur(12px);
+    opacity: 0
   }
 
-  @keyframes blur-in-expand {
-    0% {
-      transform: scale(0);
-      filter: blur(12px);
-      opacity: 0
-    }
-
-    100% {
-      transform: scale(1);
-      filter: blur(0);
-      opacity: 1
-    }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1
   }
-  /*---------------*/
+}
+
+/*---------------*/
+
+/*Drop Down*/
+
+.slide-rotate-horizontal-bottom {
+  animation: slide-rotate-horizontal-bottom 0.4s linear both
+}
+
+@keyframes slide-rotate-horizontal-bottom {
+  0% {
+    transform: translateY(150px) rotateX(90deg)
+  }
+
+  100% {
+    transform: translateY(0px) rotateX(0deg)
+  }
+}
+
+/*---------------*/
+
 
 /* Header*/
 
@@ -124,8 +144,7 @@ a:active {
 
 /*-------------------------------*/
 
-/*About*/
-
+/*Langindg*/
 
 
 /*-------------------------------*/
