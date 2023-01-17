@@ -1,6 +1,3 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import Data from "../../data.json"
 import Carousel from 'react-bootstrap/Carousel';
 import video from '../../images/PIZZA Spot Publicitario Trattoria.mp4'
 
@@ -51,7 +48,7 @@ const Landing = () => {
                 <label className="col-12 centrar"> Pide tu pizza a domicilio</label>
                 <img style={{ maxHeight: "400px", maxWidth: "500px", padding:"50px" }} src="https://okdiario.com/img/2020/01/30/repartidor-655x368.jpg" alt="repartidor" />
                 <div className="col-12 centrar" style={{height:"300px", margin:"10px"}}>
-                    <iframe style={{height:"100%"}} src={video} allowFullScreen="1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                    <iframe style={{height:"100%"}} title='titulo-del-video' src={video} allowFullScreen="1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" ></iframe>
 
                 </div>
             </div>
