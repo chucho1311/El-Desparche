@@ -1,10 +1,26 @@
 import Data from "../../data.json"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+// import getRestaurants from "../../common/getRestaurants.js"
 
 const Principal = () => {
 
+    // const [bucaramanga, setBucaramanga] = useState([]);
+
+    // useEffect(() => {
+    //     try {
+    //         getRestaurants()
+    //         .then((res) => {
+    //             console.log(res);
+    //         })
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }, [])
+
+    // console.log(bucaramanga);
     const [topicSelected, setTopicSelected] = useState(Data.restaurants);
+    
 
     return (
         <div className="col ">
