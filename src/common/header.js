@@ -1,9 +1,10 @@
 //import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { getUsers } from "./getUsers";
 
 const Header = () => {
 
@@ -13,28 +14,61 @@ const Header = () => {
     const handleShow = () => setShow(true);
 
     //Variables para guardar en el localstorage
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState();
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
 
-    //Obtiene la informacion del usuario en el local Storage
-    const getToLocalStorage = () => {
-        console.log(user, password)
-        const userData = JSON.parse(localStorage.getItem('User'))
-        console.log(userData);
+    // const [giron, setGiron] = useState([])
 
+    useEffect(() => {
+        getUsers()
+            .then((res) => {
+                setUser(res.data);
+            })
+    }, [])
+
+    const getUsersSelected = () => {
+        const arr = user.filter(info => info.email === email && info.password === password);
+        const userData = arr[0];
         if (userData) {
-            if (user === userData.user && password === userData.password) {
-                localStorage.setItem('loged', JSON.stringify({ status: true }))
-                handleClose()
-                window.location.reload();
-            }
-            else {
-                setError(true);
-            }
+            localStorage.setItem('loged', JSON.stringify({ status: true }))
+            handleClose()
+            window.location.reload();
         }
-
+        else {
+            setError(true);
+        }
+        console.log(userData);
     }
+
+    // Obtiene la informacion del usuario en el local Storage
+    // const getToLocalStorage = () => {
+    //     console.log(user, password)
+    //     const userData = JSON.parse(localStorage.getItem('User'))
+    //     // console.log(userData);
+    //     console.log('hola');
+    //     if (user === userData.email && password === userData.password) {
+    //         localStorage.setItem('loged', JSON.stringify({ status: true }))
+    //         handleClose()
+    //         window.location.reload();
+    //     }
+    //     else {
+    //         setError(true);
+    //     }
+    //     // if (userData.name) {
+    //     //     console.log(user,password);
+    //     //     if (user === userData.email && password === userData.password) {
+    //     //         localStorage.setItem('loged', JSON.stringify({ status: true }))
+    //     //         handleClose()
+    //     //         window.location.reload();
+    //     //     }
+    //     //     else {
+    //     //         setError(true);
+    //     //     }
+    //     // }
+
+    // }
 
     const redirect = useNavigate();
 
@@ -67,7 +101,7 @@ const Header = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="form-floating mb-3 ">
-                        <input onChange={(e) => setUser(e.target.value)} type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                        <input onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
                         <label htmlFor="floatingInput">Email</label>
                     </div>
                     <div className="form-floating mb-3 ">
@@ -84,7 +118,7 @@ const Header = () => {
                     </Button>
                     <Button variant="primary"
                         onClick={() => {
-                            getToLocalStorage()
+                            getUsersSelected()
                         }}>
                         Save Changes
                     </Button>
