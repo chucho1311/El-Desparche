@@ -2,7 +2,7 @@ import Header from "../common/header";
 import Footer from "../common/footer";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
-
+import axios from "axios";
 
 const Login = () => {
 
@@ -11,14 +11,38 @@ const Login = () => {
     const [userPassword, setUserPassword] = useState('');
     const [userConfirmPassword, setUserConfirmPassword] = useState('.');
 
+    const createPost = async (data) => {
+
+        let headersList = {
+            "Accept": "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+            "Content-Type": "application/json"
+        }
+
+        let bodyContent = JSON.stringify({
+            data
+        });
+
+        let reqOptions = {
+            url: "https://proyect-production.up.railway.app/api/v1/users",
+            method: "POST",
+            headers: headersList,
+            data: bodyContent,
+        }
+
+        let response = await axios.request(reqOptions);
+        console.log(response.data);
+    }
+
     // se guarda la informacion del usuario en el localStorage
     const saveLocalStorage = () => {
         let userData = {
-            user: userEmail,
+            email: userEmail,
+            name: userName,
             password: userPassword,
-            name: userName
         }
-        console.log(userData);
+        createPost(userData)
+        // console.log(userData);
         localStorage.setItem('User', JSON.stringify(userData));
     }
 
@@ -56,7 +80,7 @@ const Login = () => {
                                         saveLocalStorage()
                                         redirect('/')
                                     }}
-                                     type="button" className="btn btn-primary">
+                                        type="button" className="btn btn-primary">
                                         Enviar
                                     </button>
 
