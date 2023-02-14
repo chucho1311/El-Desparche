@@ -52,7 +52,7 @@ const Restaurants = () => {
             let arr = giron.filter((info) => id === info.id)
             setData(arr[0])
         }
-    })
+    },[])
 
     //se obtiene informacion del usuario en el localStorage
     const userData = JSON.parse(localStorage.getItem("User"));
