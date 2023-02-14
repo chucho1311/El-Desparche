@@ -8,6 +8,7 @@ import { getBucaramangaRestaurants, getFloridaRestaurants, getGironRestaurants }
 import Carousel from 'react-bootstrap/Carousel';
 import foto2 from '../images/restaurante3.jpeg'
 import Footer from '../common/footer';
+import Menu from '../common/menu';
 
 
 const Restaurants = () => {
@@ -52,7 +53,7 @@ const Restaurants = () => {
             let arr = giron.filter((info) => id === info.id)
             setData(arr[0])
         }
-    },[bucaramanga,florida,giron,id,city])
+    }, [bucaramanga, florida, giron, id, city])
 
     //se obtiene informacion del usuario en el localStorage
     const userData = JSON.parse(localStorage.getItem("User"));
@@ -65,27 +66,30 @@ const Restaurants = () => {
                         <div className="col-12 col-sm-6 centrar blur-in-expand">
                             <img className="img-places" src={dataRestaurant.photo} alt="Restaurant" />
                         </div>
-                        <div className="col info-places centrar">
-                            <table className="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Nombre</th>
-                                        <td>{dataRestaurant.name}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Dirección</th>
-                                        <td>{dataRestaurant.address}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Numero</th>
-                                        <td><i className="zmdi zmdi-whatsapp zmdi-hc-lg"></i> {dataRestaurant.number}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Instagram</th>
-                                        <td>{dataRestaurant.instagram}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div className="col info-places">
+                            <div className='row centrar'>
+                                <table className="table col-12">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Nombre</th>
+                                            <td>{dataRestaurant.name}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Dirección</th>
+                                            <td>{dataRestaurant.address}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Numero</th>
+                                            <td><i className="zmdi zmdi-whatsapp zmdi-hc-lg"></i> {dataRestaurant.number}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Instagram</th>
+                                            <td>{dataRestaurant.instagram}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <Menu />
+                            </div>
                         </div>
                     </div>
                     <div className="row centrar" style={{ margin: "10px" }}>
@@ -130,27 +134,30 @@ const Restaurants = () => {
                         <div className="col-12 col-sm-6 centrar blur-in-expand">
                             <img className="img-places" src={dataRestaurant.photo} alt="Restaurant" />
                         </div>
-                        <div className="col info-places centrar">
-                            <table className="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Nombre</th>
-                                        <td>{dataRestaurant.name}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Dirección</th>
-                                        <td>{dataRestaurant.address}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Numero</th>
-                                        <td><i className="zmdi zmdi-whatsapp zmdi-hc-lg"></i> {dataRestaurant.number}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Instagram</th>
-                                        <td>{dataRestaurant.instagram}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div className="col info-places">
+                            <div className='row centrar'>
+                                <table className="table col-12">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Nombre</th>
+                                            <td>{dataRestaurant.name}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Dirección</th>
+                                            <td>{dataRestaurant.address}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Numero</th>
+                                            <td><i className="zmdi zmdi-whatsapp zmdi-hc-lg"></i> {dataRestaurant.number}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Instagram</th>
+                                            <td>{dataRestaurant.instagram}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <Menu />
+                            </div>
                         </div>
                     </div>
                     <div className="row centrar" style={{ margin: "10px" }}>
@@ -195,27 +202,30 @@ const Restaurants = () => {
                         <div className="col-12 col-sm-6 centrar blur-in-expand">
                             <img className="img-places" src={dataRestaurant.photo} alt="Restaurant" />
                         </div>
-                        <div className="col info-places centrar">
-                            <table className="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Nombre</th>
-                                        <td>{dataRestaurant.name}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Dirección</th>
-                                        <td>{dataRestaurant.address}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Numero</th>
-                                        <td><i className="zmdi zmdi-whatsapp zmdi-hc-lg"></i> {dataRestaurant.number}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Instagram</th>
-                                        <td>{dataRestaurant.instagram}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div className="col info-places">
+                            <div className='row centrar'>
+                                <table className="table col-12">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Nombre</th>
+                                            <td>{dataRestaurant.name}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Dirección</th>
+                                            <td>{dataRestaurant.address}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Numero</th>
+                                            <td><i className="zmdi zmdi-whatsapp zmdi-hc-lg"></i> {dataRestaurant.number}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Instagram</th>
+                                            <td>{dataRestaurant.instagram}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <Menu />
+                            </div>
                         </div>
                     </div>
                     <div className="row centrar" style={{ margin: "10px" }}>
@@ -263,7 +273,7 @@ const Restaurants = () => {
                 {userData && data
                     ?
                     <div>
-                        {showData(data) }
+                        {showData(data)}
                     </div>
                     : <button type="button" className="btn btn-primary" onClick={() => redirect('/')}>Inicio</button>
                 }

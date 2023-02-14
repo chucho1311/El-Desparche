@@ -12,16 +12,14 @@ const Login = () => {
     const [userConfirmPassword, setUserConfirmPassword] = useState('.');
 
     const createPost = async (data) => {
-
+        console.log(data);
         let headersList = {
             "Accept": "*/*",
             "User-Agent": "Thunder Client (https://www.thunderclient.com)",
             "Content-Type": "application/json"
         }
 
-        let bodyContent = JSON.stringify({
-            data
-        });
+        let bodyContent = data;
 
         let reqOptions = {
             url: "https://proyect-production.up.railway.app/api/v1/users",
@@ -29,7 +27,7 @@ const Login = () => {
             headers: headersList,
             data: bodyContent,
         }
-
+        console.log(bodyContent);
         let response = await axios.request(reqOptions);
         console.log(response.data);
     }
@@ -37,8 +35,8 @@ const Login = () => {
     // se guarda la informacion del usuario en el localStorage
     const saveLocalStorage = () => {
         let userData = {
-            email: userEmail,
             name: userName,
+            email: userEmail,
             password: userPassword,
         }
         createPost(userData)
